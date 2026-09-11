@@ -1,5 +1,5 @@
 """
-This Python script implements the complete experimental framework for the study “Trustworthy and Resource-Efficient Machine Learning for Phishing URL Detection: Feature Reduction, Explainability and Generalization Analysis.”
+This Python script implements the complete experimental framework for the study “Trustworthy and Resource-Efficient Machine Learning for Phishing URL Detection: Feature Reduction and Generalization Analysis”
 
 The script uses the 87 engineered features of the Hannousse–Yahiouche phishing URL benchmark and excludes the original URL string from the predictive feature set. It performs data validation, preprocessing, model training, feature selection, evaluation and visualization.
 
