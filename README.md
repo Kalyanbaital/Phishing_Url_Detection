@@ -1,6 +1,6 @@
 This repository contains the reproducible source code, experimental results and figures associated with the research paper:
 
-“Trustworthy and Resource-Efficient Machine Learning for Phishing URL Detection: Feature Reduction, Explainability and Generalization Analysis.”
+“Trustworthy and Resource-Efficient Machine Learning for Phishing URL Detection: Feature Reduction and Generalization Analysis”
 
 The study evaluates machine-learning approaches for phishing URL detection using the Hannousse–Yahiouche Web page phishing detection dataset, containing 11,430 URLs and 87 engineered features.
 
