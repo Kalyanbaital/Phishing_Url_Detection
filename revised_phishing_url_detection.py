@@ -1,4 +1,40 @@
 """
+This Python script implements the complete experimental framework for the study “Trustworthy and Resource-Efficient Machine Learning for Phishing URL Detection: Feature Reduction, Explainability and Generalization Analysis.”
+
+The script uses the 87 engineered features of the Hannousse–Yahiouche phishing URL benchmark and excludes the original URL string from the predictive feature set. It performs data validation, preprocessing, model training, feature selection, evaluation and visualization.
+
+The implemented machine-learning models are:
+
+Logistic Regression
+K-Nearest Neighbors (KNN)
+Support Vector Machine (SVM)
+Random Forest (RF)
+XGBoost
+Multilayer Perceptron (MLP)
+
+The script evaluates the models using:
+
+Accuracy
+Precision
+Recall
+F1-score
+ROC-AUC
+PR-AUC
+Matthews Correlation Coefficient (MCC)
+Training time
+Prediction/inference time
+
+A major part of the implementation is leakage-controlled feature selection. Mutual-information-based feature selection is performed within the machine-learning pipeline so that the test data are not used during feature ranking. The experiments compare the complete 87-feature representation with reduced feature sets of 30, 20 and 10 features.
+
+The script also performs a domain-disjoint generalization experiment, in which URLs belonging to the same approximate registrable domain are kept within the same fold. This provides a more realistic assessment of model performance on previously unseen domain groups.
+
+The script additionally generates the numerical result files and figures used in the research paper.
+
+Purpose:
+To provide a reproducible implementation of the complete phishing URL detection experiments reported in the paper.
+"""
+
+"""
 Leakage-controlled phishing URL detection experiments.
 Dataset: Hannousse & Yahiouche (Mendeley Data V3), dataset_B_05_2020.csv
 
