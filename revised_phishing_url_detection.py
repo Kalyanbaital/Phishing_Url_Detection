@@ -50,8 +50,8 @@ Main protocol:
   - 80/20 stratified holdout, random_state=42.
   - Feature selection is fitted only on training data, never on the test set.
   - Optional 5-fold stratified CV for all models.
-  - 5-fold StratifiedGroupKFold using an approximate registrable-domain group
-    to test generalization to unseen domains.
+  - 5-fold StratifiedGroupKFold using an approximate domain groups derived from
+    URL hostnames to assess generalization across groups held out from training.
 
 Install:
   pip install pandas numpy scikit-learn xgboost matplotlib
