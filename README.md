@@ -46,13 +46,13 @@ F1-score versus the number of selected features.
 
 Confusion matrix of the XGBoost model using all 87 features.
 
-7. fig4_top_features_mi.png
-
-Top features identified using mutual-information analysis on the training data.
-
-8. fig5_domain_disjoint.png
+7. fig4_domain_disjoint.png
 
 Performance comparison under domain-disjoint five-fold evaluation.
+
+8. fig5_top_features_mi.png
+
+Top features identified using mutual-information analysis on the training data.
 
 Dataset
 
