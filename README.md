@@ -81,3 +81,39 @@ XGBoost provides the best performance among the evaluated models on the standard
 Importantly, the model retains approximately 96.17% F1-score using only 30 features, demonstrating that a substantial reduction in feature complexity is possible with only a small loss in predictive performance.
 
 The domain-disjoint evaluation provides an additional assessment of generalization to previously unseen domain groups.
+
+## Reproducing the Experiments
+
+### Requirements
+
+Python 3.11 is recommended. Install the required packages using:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Dataset
+
+Obtain Version 3 of the Hannousse–Yahiouche *Web page phishing detection* dataset from its official Mendeley Data record. Place the CSV file in the repository directory, or provide its path when running the script. The dataset is not included in this repository.
+
+### Run the experiments
+
+Run the principal holdout and domain-group-disjoint experiments with:
+
+```bash
+python revised_phishing_url_detection.py --csv dataset_B_05_2020.csv --output results
+```
+
+The output directory contains the holdout results, domain-group-disjoint results, dataset audit, feature rankings, selected-feature lists, confusion matrices, and performance figures.
+
+An optional five-fold cross-validation analysis for the holdout training partition can be run using:
+
+```bash
+python revised_phishing_url_detection.py --csv dataset_B_05_2020.csv --output results --full-cv
+```
+
+The optional cross-validation analysis is additional to the principal holdout and domain-group-disjoint experiments reported in the manuscript.
+
+### Reported results
+
+The manuscript reports the 80:20 stratified holdout results in `holdout_results.csv` and the five-fold approximate domain-group-disjoint results in `domain_disjoint_results.csv`. The figures included in the repository correspond to Figures 1–5 of the manuscript.
